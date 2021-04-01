@@ -1,16 +1,78 @@
+/* full document stuff */
 body {
     font-family: 'IBM Plex Mono', monospace;
     background-color: rgb(40, 64, 64);
     color: rgb(224, 224, 224);
 }
 
-div.mainbody {
+/* link stuff */
+a:link {
+    color: rgb(128, 128, 224);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(148, 128, 224);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(128, 128, 224);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(128, 128, 224);
+    text-decoration: underline;
+}
+
+/* header stuff */
+.mainheader h1 {
+    margin-top: 0.8em;
+    font-size: 56px;
+    line-height: 0.1;
+}
+
+.mainheader h3 {
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* stuff for every section */
+.section {
+    background-color: rgb(30, 48, 48);
+    
     max-width: 1024px;
-    margin: auto;
+    margin: 1em auto 1em auto;
     padding: 0em 1em 0em 1em;
-    font-size: 20px;
+    
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: rgb(224, 224, 224);
+}
+
+.section p {
+    /* This font size is manually copied into ".section h3"'s margins below */
+    font-size: 20px;
+}
+
+.section h3 {
+    font-size: 32px;
+    
+    /* Note: these margins come from the font-size in .section's p */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* stuff for the footer */
+.footer {
+    /* This is the same as for .section */
+    /* max-width: 1024px;
+    margin: auto; */
+    left: calc(50% - 512px);
+    /* ^ This is a way of getting max-width with fixed positioning */
+    
+    position: fixed;
+    bottom: 0;
 }
